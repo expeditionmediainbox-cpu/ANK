@@ -1,0 +1,18 @@
+{
+  "collections": [
+    {
+      "name": "comments",
+      "schema": {
+        "properties": {
+          "name": { "type": "string" },
+          "email": { "type": "string" },
+          "content": { "type": "string" },
+          "role": { "type": "string" },
+          "likes": { "type": "number" },
+          "createdAt": { "type": "timestamp" }
+        },
+        "required": ["name", "content", "role"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /comments/{commentId} {
+      allow read: if true;
+      allow create: if request.resource.data.name is string 
+                   && request.resource.data.content is string
+                   && request.resource.data.content.size() <= 1000
+                   && request.resource.data.name.size() <= 100;
+      allow update: if request.resource.data.diff(resource.data).affectedKeys().hasOnly(['likes']);
+    }
+  }
+}
