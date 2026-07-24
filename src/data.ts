@@ -66,121 +66,121 @@ export const PORTFOLIO_IMAGES: PortfolioImage[] = [
   {
     id: "img-1",
     category: "Fashion Campaigns",
-    url: "https://res.cloudinary.com/rpgo7m2a/image/upload/v1783190210/615803646_122104804731210251_4427813637058255115_n_cqvd4i.jpg",
+    url: "https://res.cloudinary.com/rpgo7m2a/image/upload/f_auto,q_auto/v1783190210/615803646_122104804731210251_4427813637058255115_n_cqvd4i.jpg",
     title: "Classic Portrait",
     photographer: "Aarav Mehta"},
   {
     id: "img-2",
     category: "Fashion Campaigns",
-    url: "https://res.cloudinary.com/rpgo7m2a/image/upload/v1783190210/620152596_122107898091210251_8440430729532668923_n_mz7qb1.jpg",
+    url: "https://res.cloudinary.com/rpgo7m2a/image/upload/f_auto,q_auto/v1783190210/620152596_122107898091210251_8440430729532668923_n_mz7qb1.jpg",
     title: "Studio Glam",
     photographer: "Aarav Mehta"},
   {
     id: "img-3",
     category: "Fashion Campaigns",
-    url: "https://res.cloudinary.com/rpgo7m2a/image/upload/v1783190210/618364853_122107898505210251_6276888572804363985_n_zvph5v.jpg",
+    url: "https://res.cloudinary.com/rpgo7m2a/image/upload/f_auto,q_auto/v1783190210/618364853_122107898505210251_6276888572804363985_n_zvph5v.jpg",
     title: "Fashion Editorial",
     photographer: "Aarav Mehta"},
   {
     id: "img-4",
     category: "Fashion Campaigns",
-    url: "https://res.cloudinary.com/rpgo7m2a/image/upload/v1783190209/618378595_122107947579210251_4223409504481970504_n_zrtbmb.jpg",
+    url: "https://res.cloudinary.com/rpgo7m2a/image/upload/f_auto,q_auto/v1783190209/618378595_122107947579210251_4223409504481970504_n_zrtbmb.jpg",
     title: "Beauty Close-Up",
     photographer: "Aarav Mehta"},
   {
     id: "img-5",
     category: "Fashion Campaigns",
-    url: "https://res.cloudinary.com/rpgo7m2a/image/upload/v1783190209/618042512_122107898217210251_8495220047900886670_n_e0zttu.jpg",
+    url: "https://res.cloudinary.com/rpgo7m2a/image/upload/f_auto,q_auto/v1783190209/618042512_122107898217210251_8495220047900886670_n_e0zttu.jpg",
     title: "Lifestyle Shoot",
     photographer: "Aarav Mehta"},
   {
     id: "img-6",
     category: "Fashion Campaigns",
-    url: "https://res.cloudinary.com/dtzyjynai/image/upload/v1784408609/2_iw1gx7.jpg",
+    url: "https://res.cloudinary.com/dtzyjynai/image/upload/f_auto,q_auto/v1784408609/2_iw1gx7.jpg",
     title: "Outdoor Portrait",
     photographer: "Aarav Mehta"
   },
   {
     id: "img-7",
     category: "Fashion Campaigns",
-    url: "https://res.cloudinary.com/dtzyjynai/image/upload/v1784408609/1_kugbdd.jpg",
+    url: "https://res.cloudinary.com/dtzyjynai/image/upload/f_auto,q_auto/v1784408609/1_kugbdd.jpg",
     title: "Urban Street Style",
     photographer: "Aarav Mehta"
   },
   {
     id: "img-8",
     category: "Fashion Campaigns",
-    url: "https://res.cloudinary.com/dtzyjynai/image/upload/v1784408609/4_emazhp.jpg",
+    url: "https://res.cloudinary.com/dtzyjynai/image/upload/f_auto,q_auto/v1784408609/4_emazhp.jpg",
     title: "Golden Hour Session",
     photographer: "Aarav Mehta"
   },
   {
     id: "img-9",
     category: "Fashion Campaigns",
-    url: "https://res.cloudinary.com/dtzyjynai/image/upload/v1784408609/3_p3lldf.jpg",
+    url: "https://res.cloudinary.com/dtzyjynai/image/upload/f_auto,q_auto/v1784408609/3_p3lldf.jpg",
     title: "Luxury Portrait",
     photographer: "Aarav Mehta"
   },
   {
     id: "img-10",
     category: "Fashion Campaigns",
-    url: "https://res.cloudinary.com/dtzyjynai/image/upload/v1784408608/5_wt50dy.jpg",
+    url: "https://res.cloudinary.com/dtzyjynai/image/upload/f_auto,q_auto/v1784408608/5_wt50dy.jpg",
     title: "Fine Art Portrait",
     photographer: "Aarav Mehta"
   },
   {
     id: "img-11",
     category: "Fashion Campaigns",
-    url: "https://res.cloudinary.com/dtzyjynai/image/upload/v1784409313/aifaceswap-fb8a26faeb18ca7ae74a265397cb5a11_bd2cqu.jpg",
+    url: "https://res.cloudinary.com/dtzyjynai/image/upload/f_auto,q_auto/v1784409313/aifaceswap-fb8a26faeb18ca7ae74a265397cb5a11_bd2cqu.jpg",
     title: "Editorial Vogue",
     photographer: "Aarav Mehta"
   },
   {
     id: "img-12",
     category: "Fashion Campaigns",
-    url: "https://res.cloudinary.com/dtzyjynai/image/upload/v1784409314/aifaceswap-f0eb3830ed39e551e7d05fd99ca02929_iessip.jpg",
+    url: "https://res.cloudinary.com/dtzyjynai/image/upload/f_auto,q_auto/v1784409314/aifaceswap-f0eb3830ed39e551e7d05fd99ca02929_iessip.jpg",
     title: "Signature Lookbook",
     photographer: "Aarav Mehta"
   },
   {
     id: "img-13",
     category: "Fashion Campaigns",
-    url: "https://res.cloudinary.com/dtzyjynai/image/upload/v1784409314/aifaceswap-e842d01c9b4bf4f795c2bd7910aba8c8_bfopbh.jpg",
+    url: "https://res.cloudinary.com/dtzyjynai/image/upload/f_auto,q_auto/v1784409314/aifaceswap-e842d01c9b4bf4f795c2bd7910aba8c8_bfopbh.jpg",
     title: "High Fashion Session",
     photographer: "Aarav Mehta"
   },
   {
     id: "img-14",
     category: "Fashion Campaigns",
-    url: "https://res.cloudinary.com/dtzyjynai/image/upload/v1784409314/aifaceswap-d904b819d029b1ce4fe58b191cfe8f8e_y72tsd.jpg",
+    url: "https://res.cloudinary.com/dtzyjynai/image/upload/f_auto,q_auto/v1784409314/aifaceswap-d904b819d029b1ce4fe58b191cfe8f8e_y72tsd.jpg",
     title: "Designer Collection Shoot",
     photographer: "Aarav Mehta"
   },
   {
     id: "img-15",
     category: "Fashion Campaigns",
-    url: "https://res.cloudinary.com/dtzyjynai/image/upload/v1784409315/aifaceswap-671bf446a966022a688269b8f2862f7b_nd7l1o.jpg",
+    url: "https://res.cloudinary.com/dtzyjynai/image/upload/f_auto,q_auto/v1784409315/aifaceswap-671bf446a966022a688269b8f2862f7b_nd7l1o.jpg",
     title: "Commercial Fashion Shoot",
     photographer: "Aarav Mehta"
   },
   {
     id: "img-16",
     category: "Fashion Campaigns",
-    url: "https://res.cloudinary.com/dtzyjynai/image/upload/v1784409314/aifaceswap-c94a6a4af0ad874b834e901702027fb2_pf0igd.jpg",
+    url: "https://res.cloudinary.com/dtzyjynai/image/upload/f_auto,q_auto/v1784409314/aifaceswap-c94a6a4af0ad874b834e901702027fb2_pf0igd.jpg",
     title: "Magazine Cover Shoot",
     photographer: "Aarav Mehta"
   },
   {
     id: "img-17",
     category: "Fashion Campaigns",
-    url: "https://res.cloudinary.com/dtzyjynai/image/upload/v1784409315/aifaceswap-039d8c193274d9b0631627e0dd1c0f0d_k3hd6f.jpg",
+    url: "https://res.cloudinary.com/dtzyjynai/image/upload/f_auto,q_auto/v1784409315/aifaceswap-039d8c193274d9b0631627e0dd1c0f0d_k3hd6f.jpg",
     title: "Portfolio Builder",
     photographer: "Aarav Mehta"
   },
   {
     id: "img-18",
     category: "Fashion Campaigns",
-    url: "https://res.cloudinary.com/dtzyjynai/image/upload/v1784409315/aifaceswap-9ee15745593e4aba68e8cfc614e9f817_zsrwt6.jpg",
+    url: "https://res.cloudinary.com/dtzyjynai/image/upload/f_auto,q_auto/v1784409315/aifaceswap-9ee15745593e4aba68e8cfc614e9f817_zsrwt6.jpg",
     title: "Model Test Shoot",
     photographer: "Aarav Mehta"
   }

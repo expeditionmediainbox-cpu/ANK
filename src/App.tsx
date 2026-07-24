@@ -271,6 +271,9 @@ export default function App() {
               className="font-serif text-5xl md:text-7xl lg:text-8xl tracking-tight text-stone-950 leading-[0.9] font-normal"
             >
               {MODEL_NAME}
+              <span className="block font-mono text-xs md:text-sm uppercase tracking-[0.2em] font-medium text-stone-600 mt-4">
+                Professional Fashion &amp; Editorial Model
+              </span>
             </motion.h1>
 
             <motion.p

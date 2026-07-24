@@ -70,7 +70,8 @@ export default function AboutSection() {
             <div className="w-full h-full overflow-hidden relative">
               <img
                 src="https://res.cloudinary.com/rpgo7m2a/image/upload/v1783190210/619134319_122108072361210251_7065457058637743084_n_ag6raq.jpg"
-                alt="Ankita Sharma modeling traditional wear"
+                alt="Ankita Sharma - Traditional Ethnic Wear & Heritage Fashion Photoshoot"
+                loading="lazy"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover transition-all duration-300"
               />

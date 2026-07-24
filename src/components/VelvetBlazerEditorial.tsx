@@ -106,7 +106,7 @@ export default function VelvetBlazerEditorial() {
                 <div className="relative overflow-hidden aspect-[3/4] bg-stone-900 border border-stone-800">
                   <img 
                     src={image.url} 
-                    alt={image.title}
+                    alt={`Ankita Sharma Editorial Photography - ${image.title} (${image.subtitle})`}
                     className="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105 opacity-90 group-hover:opacity-100"
                     loading="lazy"
                   />

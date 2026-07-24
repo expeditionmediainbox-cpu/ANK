@@ -84,7 +84,8 @@ export default function PortfolioGallery() {
                 <div className="overflow-hidden w-full h-full relative">
                   <img
                     src={image.url}
-                    alt={image.title}
+                    alt={`Ankita Sharma - ${image.title} (${image.category})`}
+                    loading="lazy"
                     referrerPolicy="no-referrer"
                     className="object-cover w-full h-full transition-transform duration-700 ease-out group-hover:scale-105"
                   />
@@ -160,7 +161,7 @@ export default function PortfolioGallery() {
                 <div className="md:w-3/5 bg-black flex items-center justify-center">
                   <img
                     src={filteredImages[lightboxIndex].url}
-                    alt={filteredImages[lightboxIndex].title}
+                    alt={`Ankita Sharma Portfolio - ${filteredImages[lightboxIndex].title}`}
                     referrerPolicy="no-referrer"
                     className="max-h-[75vh] md:max-h-[80vh] w-full object-contain"
                   />
