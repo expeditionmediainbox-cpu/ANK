@@ -165,8 +165,8 @@ export default function PrivateSessionModal({ isOpen, onClose, onPaymentSuccess 
                   initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
                   className="flex flex-col items-center text-center py-4"
                 >
-                  <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mb-6">
-                    <CheckCircle className="w-8 h-8" />
+                  <div className="w-16 h-16 bg-emerald-400 text-black rounded-full flex items-center justify-center mb-6 shadow-md">
+                    <CheckCircle className="w-8 h-8 text-black" />
                   </div>
                   <h3 className="font-serif text-2xl text-stone-900 mb-2">Payment Successful</h3>
                   <p className="text-sm font-sans text-stone-600 mb-8">
@@ -177,9 +177,9 @@ export default function PrivateSessionModal({ isOpen, onClose, onPaymentSuccess 
                       href={`https://t.me/${CONTACT_TELEGRAM.replace('@', '')}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full bg-[#229ED9] hover:bg-[#1c8cb2] text-white py-3.5 px-6 text-xs font-mono uppercase tracking-widest transition-colors flex items-center justify-center gap-2"
+                      className="w-full bg-[#229ED9] hover:bg-[#38b2ec] text-black font-bold py-3.5 px-6 text-xs font-mono uppercase tracking-widest transition-colors flex items-center justify-center gap-2 shadow-md"
                     >
-                      <MessageCircle className="w-4 h-4" /> Start Private Chat
+                      <MessageCircle className="w-4 h-4 text-black" /> Start Private Chat
                     </a>
                     <div className="relative py-2">
                       <div className="absolute inset-0 flex items-center"><div className="w-full border-t border-stone-200"></div></div>
@@ -206,8 +206,8 @@ export default function PrivateSessionModal({ isOpen, onClose, onPaymentSuccess 
                   initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
                   className="flex flex-col items-center text-center py-4"
                 >
-                  <div className="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mb-6">
-                    <AlertCircle className="w-8 h-8" />
+                  <div className="w-16 h-16 bg-red-400 text-black rounded-full flex items-center justify-center mb-6 shadow-md">
+                    <AlertCircle className="w-8 h-8 text-black" />
                   </div>
                   <h3 className="font-serif text-2xl text-stone-900 mb-2">Payment Failed</h3>
                   <p className="text-sm font-sans text-stone-600 mb-8">Your booking could not be completed. Please try again.</p>

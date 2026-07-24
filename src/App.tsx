@@ -125,14 +125,14 @@ export default function App() {
                 href="https://wa.me/917827484599?text=Hello%20Ankita%20and%20team,%20I'm%20interested%20in%20discussing%20a%20modeling%20project%20with%20you."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 text-[10px] font-mono uppercase tracking-widest transition-colors duration-300 flex items-center gap-1.5 shadow-sm"
+                className="bg-emerald-400 hover:bg-emerald-300 text-black font-bold px-4 py-2.5 text-[10px] font-mono uppercase tracking-widest transition-colors duration-300 flex items-center gap-1.5 shadow-sm"
               >
                 <MessageCircle className="w-3.5 h-3.5" /> WhatsApp
               </a>
             ) : (
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="bg-stone-400 text-white px-4 py-2.5 text-[10px] font-mono uppercase tracking-widest transition-colors duration-300 flex items-center gap-1.5 shadow-sm cursor-pointer hover:bg-stone-500"
+                className="bg-emerald-400 text-black font-bold px-4 py-2.5 text-[10px] font-mono uppercase tracking-widest transition-colors duration-300 flex items-center gap-1.5 shadow-sm cursor-pointer hover:bg-emerald-300"
                 title="Pay ₹100 to unlock WhatsApp"
               >
                 <Lock className="w-3.5 h-3.5" /> WhatsApp 🔒
@@ -142,7 +142,7 @@ export default function App() {
               href={`https://t.me/${CONTACT_TELEGRAM.replace('@', '')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#229ED9] hover:bg-[#1c8cb2] text-white px-4 py-2.5 text-[10px] font-mono uppercase tracking-widest transition-colors duration-300 flex items-center gap-1.5 shadow-sm"
+              className="bg-[#229ED9] hover:bg-[#38b2ec] text-black font-bold px-4 py-2.5 text-[10px] font-mono uppercase tracking-widest transition-colors duration-300 flex items-center gap-1.5 shadow-sm"
             >
               <Send className="w-3.5 h-3.5" /> Telegram
             </a>
@@ -154,7 +154,7 @@ export default function App() {
             </button>
             <button
               onClick={() => setIsModalOpen(true)}
-              className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2.5 text-[10px] font-mono uppercase tracking-widest transition-colors duration-300 flex items-center gap-1.5 shadow-sm cursor-pointer"
+              className="bg-purple-400 hover:bg-purple-300 text-black font-bold px-4 py-2.5 text-[10px] font-mono uppercase tracking-widest transition-colors duration-300 flex items-center gap-1.5 shadow-sm cursor-pointer"
             >
               <CreditCard className="w-3.5 h-3.5" /> Pay Now
             </button>
@@ -198,14 +198,14 @@ export default function App() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="bg-emerald-600 hover:bg-emerald-700 text-white py-3 text-center text-xs font-mono uppercase tracking-widest transition-colors duration-300 flex items-center justify-center gap-2 shadow-sm"
+                  className="bg-emerald-400 hover:bg-emerald-300 text-black font-bold py-3 text-center text-xs font-mono uppercase tracking-widest transition-colors duration-300 flex items-center justify-center gap-2 shadow-sm"
                 >
                   <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
                 </a>
               ) : (
                 <button
                   onClick={() => { setMobileMenuOpen(false); setIsModalOpen(true); }}
-                  className="bg-stone-400 hover:bg-stone-500 text-white py-3 text-center text-xs font-mono uppercase tracking-widest transition-colors duration-300 flex items-center justify-center gap-2 w-full"
+                  className="bg-emerald-400 hover:bg-emerald-300 text-black font-bold py-3 text-center text-xs font-mono uppercase tracking-widest transition-colors duration-300 flex items-center justify-center gap-2 w-full"
                 >
                   <Lock className="w-4 h-4" /> WhatsApp 🔒 (Pay ₹100 to unlock)
                 </button>
@@ -215,7 +215,7 @@ export default function App() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
-                className="bg-[#229ED9] hover:bg-[#1c8cb2] text-white py-3 text-center text-xs font-mono uppercase tracking-widest transition-colors duration-300 flex items-center justify-center gap-2 shadow-sm"
+                className="bg-[#229ED9] hover:bg-[#38b2ec] text-black font-bold py-3 text-center text-xs font-mono uppercase tracking-widest transition-colors duration-300 flex items-center justify-center gap-2 shadow-sm"
               >
                 <Send className="w-4 h-4" /> Chat on Telegram
               </a>
@@ -233,7 +233,7 @@ export default function App() {
                   setMobileMenuOpen(false);
                   setIsModalOpen(true);
                 }}
-                className="bg-purple-600 hover:bg-purple-700 text-white py-3 text-center text-xs font-mono uppercase tracking-widest transition-colors duration-300 flex items-center justify-center gap-2 shadow-sm w-full cursor-pointer"
+                className="bg-purple-400 hover:bg-purple-300 text-black font-bold py-3 text-center text-xs font-mono uppercase tracking-widest transition-colors duration-300 flex items-center justify-center gap-2 shadow-sm w-full cursor-pointer"
               >
                 <CreditCard className="w-4 h-4" /> Pay via Razorpay
               </button>
@@ -336,14 +336,14 @@ export default function App() {
                   href="https://wa.me/917827484599?text=Hello%20Ankita%20and%20team,%20I'm%20interested%20in%20discussing%20a%20modeling%20project%20with%20you."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto text-center bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 text-xs font-mono uppercase tracking-widest transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                  className="w-full sm:w-auto text-center bg-emerald-400 hover:bg-emerald-300 text-black font-bold px-8 py-4 text-xs font-mono uppercase tracking-widest transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-md"
                 >
                   <MessageCircle className="w-4 h-4" /> WhatsApp Chat
                 </a>
               ) : (
                 <button
                   onClick={() => setIsModalOpen(true)}
-                  className="w-full sm:w-auto text-center bg-stone-400 hover:bg-stone-500 text-white px-8 py-4 text-xs font-mono uppercase tracking-widest transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                  className="w-full sm:w-auto text-center bg-emerald-400 hover:bg-emerald-300 text-black font-bold px-8 py-4 text-xs font-mono uppercase tracking-widest transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-md"
                 >
                   <Lock className="w-4 h-4" /> WhatsApp 🔒
                 </button>
@@ -352,7 +352,7 @@ export default function App() {
                 href={`https://t.me/${CONTACT_TELEGRAM.replace('@', '')}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto text-center bg-[#229ED9] hover:bg-[#1c8cb2] text-white px-8 py-4 text-xs font-mono uppercase tracking-widest transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                className="w-full sm:w-auto text-center bg-[#229ED9] hover:bg-[#38b2ec] text-black font-bold px-8 py-4 text-xs font-mono uppercase tracking-widest transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-md"
               >
                 <Send className="w-4 h-4" /> Telegram Chat
               </a>
@@ -364,7 +364,7 @@ export default function App() {
               </button>
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="w-full sm:w-auto text-center bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 text-xs font-mono uppercase tracking-widest transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                className="w-full sm:w-auto text-center bg-purple-400 hover:bg-purple-300 text-black font-bold px-8 py-4 text-xs font-mono uppercase tracking-widest transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-md"
               >
                 <CreditCard className="w-4 h-4" /> Pay via Razorpay
               </button>
@@ -500,12 +500,12 @@ export default function App() {
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 1.15, type: "spring", stiffness: 260, damping: 20 }}
-        className="fixed bottom-[92px] right-6 z-50 bg-[#229ED9] text-white p-3.5 rounded-full shadow-2xl flex items-center justify-center hover:bg-[#1c8cb2] hover:scale-105 active:scale-95 transition-all duration-300 group"
+        className="fixed bottom-[92px] right-6 z-50 bg-[#229ED9] text-black font-bold p-3.5 rounded-full shadow-2xl flex items-center justify-center hover:bg-[#38b2ec] hover:scale-105 active:scale-95 transition-all duration-300 group"
         id="telegram-floating-button"
         aria-label="Contact on Telegram"
       >
-        <Send className="w-6 h-6 stroke-[2.2] -ml-0.5 mt-0.5" />
-        <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 ease-out font-mono text-[10px] font-bold tracking-wider uppercase whitespace-nowrap">
+        <Send className="w-6 h-6 stroke-[2.5] -ml-0.5 mt-0.5 text-black" />
+        <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 ease-out font-mono text-[10px] font-bold tracking-wider uppercase whitespace-nowrap text-black">
           Chat on Telegram
         </span>
       </motion.a>
@@ -519,12 +519,12 @@ export default function App() {
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1, type: "spring", stiffness: 260, damping: 20 }}
-          className="fixed bottom-6 right-6 z-50 bg-emerald-500 text-white p-3.5 rounded-full shadow-2xl flex items-center justify-center hover:bg-emerald-600 hover:scale-105 active:scale-95 transition-all duration-300 group"
+          className="fixed bottom-6 right-6 z-50 bg-emerald-400 text-black font-bold p-3.5 rounded-full shadow-2xl flex items-center justify-center hover:bg-emerald-300 hover:scale-105 active:scale-95 transition-all duration-300 group"
           id="whatsapp-floating-button"
           aria-label="Contact on WhatsApp"
         >
-          <MessageCircle className="w-6 h-6 stroke-[2.5]" />
-          <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 ease-out font-mono text-[10px] font-bold tracking-wider uppercase whitespace-nowrap">
+          <MessageCircle className="w-6 h-6 stroke-[2.5] text-black" />
+          <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 ease-out font-mono text-[10px] font-bold tracking-wider uppercase whitespace-nowrap text-black">
             Chat on WhatsApp
           </span>
         </motion.a>
@@ -534,12 +534,12 @@ export default function App() {
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1, type: "spring", stiffness: 260, damping: 20 }}
-          className="fixed bottom-6 right-6 z-50 bg-stone-700 text-white p-3.5 rounded-full shadow-2xl flex items-center justify-center hover:bg-stone-800 hover:scale-105 active:scale-95 transition-all duration-300 group"
+          className="fixed bottom-6 right-6 z-50 bg-emerald-400 text-black font-bold p-3.5 rounded-full shadow-2xl flex items-center justify-center hover:bg-emerald-300 hover:scale-105 active:scale-95 transition-all duration-300 group"
           id="whatsapp-floating-button"
           aria-label="Pay to unlock WhatsApp"
         >
-          <Lock className="w-6 h-6 stroke-[2.5]" />
-          <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 ease-out font-mono text-[10px] font-bold tracking-wider uppercase whitespace-nowrap">
+          <Lock className="w-6 h-6 stroke-[2.5] text-black" />
+          <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 ease-out font-mono text-[10px] font-bold tracking-wider uppercase whitespace-nowrap text-black">
             Pay to unlock WhatsApp
           </span>
         </motion.button>
