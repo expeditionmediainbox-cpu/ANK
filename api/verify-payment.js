@@ -1,38 +1,53 @@
-import crypto from 'crypto';
-
 export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Method not allowed' });
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
   }
 
-  const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = req.body;
+  const orderId = req.method === 'GET' ? req.query?.order_id : req.body?.order_id;
 
-  if (!razorpay_order_id || !razorpay_payment_id || !razorpay_signature) {
-    return res.status(400).json({ error: 'Missing payment details' });
+  if (!orderId) {
+    return res.status(400).json({ error: 'Missing order_id' });
   }
+
+  const appId = process.env.CASHFREE_APP_ID || process.env.VITE_CASHFREE_APP_ID;
+  const secretKey = process.env.CASHFREE_SECRET_KEY || process.env.CASHFREE_KEY_SECRET;
+  const isSandbox = (process.env.CASHFREE_ENV || process.env.VITE_CASHFREE_ENV || 'production') === 'sandbox';
+
+  if (!appId || !secretKey) {
+    return res.status(500).json({ error: 'Cashfree credentials are not configured.' });
+  }
+
+  const baseUrl = isSandbox
+    ? `https://sandbox.cashfree.com/pg/orders/${orderId}`
+    : `https://api.cashfree.com/pg/orders/${orderId}`;
 
   try {
-    const secret = process.env.RAZORPAY_KEY_SECRET;
-    
-    if (!secret) {
-      return res.status(500).json({ error: 'Razorpay keys are not configured.' });
+    const response = await fetch(baseUrl, {
+      method: 'GET',
+      headers: {
+        'x-client-id': appId,
+        'x-client-secret': secretKey,
+        'x-api-version': '2023-08-01',
+      },
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      return res.status(response.status).json({ error: data.message || 'Verification failed', details: data });
     }
 
-    // Verify the signature
-    const generated_signature = crypto
-      .createHmac('sha256', secret)
-      .update(razorpay_order_id + "|" + razorpay_payment_id)
-      .digest('hex');
-
-    if (generated_signature === razorpay_signature) {
-      // Payment is successful and authentic
-      // In a full production app, we would update the database here (e.g. Firebase)
-      return res.status(200).json({ success: true, message: 'Payment verified successfully' });
+    if (data.order_status === 'PAID') {
+      return res.status(200).json({ success: true, status: 'PAID', message: 'Payment verified successfully' });
     } else {
-      return res.status(400).json({ success: false, error: 'Invalid signature' });
+      return res.status(200).json({ success: false, status: data.order_status, message: `Payment status is ${data.order_status}` });
     }
   } catch (error) {
-    console.error('Error verifying payment:', error);
-    return res.status(500).json({ error: 'Verification failed' });
+    console.error('Error verifying Cashfree payment:', error);
+    return res.status(500).json({ error: 'Verification failed', details: error.message });
   }
 }

@@ -43,46 +43,73 @@ export default function PrivateSessionModal({ isOpen, onClose, onPaymentSuccess 
     });
   };
 
-  const handleRazorpayPayment = async (service: Service) => {
+  const handleCashfreePayment = async (service: Service) => {
     setPaymentState("processing");
 
-    const scriptLoaded = await loadScript("https://checkout.razorpay.com/v1/checkout.js");
-    if (!scriptLoaded) {
-      alert("Razorpay SDK failed to load. Are you online?");
-      setPaymentState("error");
-      return;
-    }
-
     try {
-      const options = {
-        key: (import.meta as any).env?.VITE_RAZORPAY_KEY_ID || "rzp_live_TFJeatnfXug9T3",
-        amount: service.price * 100, // paise
-        currency: "INR",
-        name: "Ankita Sharma",
-        description: service.title,
-        handler: function (response: any) {
-          if (response.razorpay_payment_id) {
+      const scriptLoaded = await loadScript("https://sdk.cashfree.com/js/v3/cashfree.js");
+      if (!scriptLoaded) {
+        alert("Cashfree SDK failed to load. Are you online?");
+        setPaymentState("error");
+        return;
+      }
+
+      // Request payment session from /api/create-order
+      const response = await fetch("/api/create-order", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          amount: service.price,
+          description: service.title,
+        }),
+      });
+
+      if (!response.ok) {
+        // Fallback: If backend is unavailable or not yet configured, fallback to payment URL
+        const fallbackUrl = (import.meta as any).env?.VITE_CASHFREE_PAYMENT_URL || "https://payments.cashfree.com/forms/ankitasharma";
+        window.open(fallbackUrl, "_blank");
+        setPaymentState("idle");
+        return;
+      }
+
+      const data = await response.json();
+
+      if (data.payment_session_id) {
+        const Cashfree = (window as any).Cashfree;
+        if (typeof Cashfree !== "function") {
+          throw new Error("Cashfree SDK not available");
+        }
+
+        const cashfree = Cashfree({
+          mode: (import.meta as any).env?.VITE_CASHFREE_MODE || "production",
+        });
+
+        cashfree.checkout({
+          paymentSessionId: data.payment_session_id,
+          redirectTarget: "_modal",
+        }).then((result: any) => {
+          if (result.error) {
+            console.error("Cashfree checkout error:", result.error);
+            setPaymentState("error");
+          } else if (result.paymentDetails) {
             setPaymentState("success");
             if (onPaymentSuccess) onPaymentSuccess();
           } else {
-            setPaymentState("error");
-          }
-        },
-        modal: {
-          ondismiss: function () {
             setPaymentState("idle");
-          },
-        },
-        prefill: { name: "", email: "", contact: "" },
-        theme: { color: "#9333ea" },
-      };
-
-      const paymentObject = new (window as any).Razorpay(options);
-      paymentObject.on("payment.failed", () => setPaymentState("error"));
-      paymentObject.open();
+          }
+        });
+      } else {
+        throw new Error(data.error || "No payment session returned");
+      }
     } catch (error) {
-      console.error("Payment error:", error);
-      setPaymentState("error");
+      console.error("Cashfree payment error:", error);
+      const fallbackUrl = (import.meta as any).env?.VITE_CASHFREE_PAYMENT_URL;
+      if (fallbackUrl) {
+        window.open(fallbackUrl, "_blank");
+        setPaymentState("idle");
+      } else {
+        setPaymentState("error");
+      }
     }
   };
 
@@ -127,7 +154,7 @@ export default function PrivateSessionModal({ isOpen, onClose, onPaymentSuccess 
                     {SERVICES.map((service) => (
                       <button
                         key={service.id}
-                        onClick={() => handleRazorpayPayment(service)}
+                        onClick={() => handleCashfreePayment(service)}
                         className="w-full bg-white border border-stone-200 hover:border-purple-500 transition-all duration-300 p-4 flex items-center justify-between group shadow-sm hover:shadow-md"
                       >
                         <div className="flex items-center gap-3">
@@ -155,7 +182,7 @@ export default function PrivateSessionModal({ isOpen, onClose, onPaymentSuccess 
                 >
                   <div className="w-12 h-12 border-4 border-stone-200 border-t-purple-600 rounded-full animate-spin mb-6"></div>
                   <h3 className="font-serif text-xl text-stone-900 mb-2">Opening Payment...</h3>
-                  <p className="text-sm font-sans text-stone-500">Please complete the payment in the Razorpay window.</p>
+                  <p className="text-sm font-sans text-stone-500">Please complete the payment in the Cashfree window.</p>
                 </motion.div>
               )}
 

@@ -235,7 +235,7 @@ export default function App() {
                 }}
                 className="bg-purple-400 hover:bg-purple-300 text-black font-bold py-3 text-center text-xs font-mono uppercase tracking-widest transition-colors duration-300 flex items-center justify-center gap-2 shadow-sm w-full cursor-pointer"
               >
-                <CreditCard className="w-4 h-4" /> Pay via Razorpay
+                <CreditCard className="w-4 h-4" /> Pay via Cashfree
               </button>
             </div>
           </motion.div>
@@ -366,7 +366,7 @@ export default function App() {
                 onClick={() => setIsModalOpen(true)}
                 className="w-full sm:w-auto text-center bg-purple-400 hover:bg-purple-300 text-black font-bold px-8 py-4 text-xs font-mono uppercase tracking-widest transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-md"
               >
-                <CreditCard className="w-4 h-4" /> Pay via Razorpay
+                <CreditCard className="w-4 h-4" /> Pay via Cashfree
               </button>
             </motion.div>
           </div>

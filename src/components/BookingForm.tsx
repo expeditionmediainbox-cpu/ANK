@@ -34,7 +34,8 @@ export default function BookingForm() {
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSuccess(true);
-      window.open("https://razorpay.me/@ankita1170", "_blank");
+      const cashfreeUrl = (import.meta as any).env?.VITE_CASHFREE_PAYMENT_URL || "https://payments.cashfree.com/forms/ankitasharma";
+      window.open(cashfreeUrl, "_blank");
     }, 1200);
   };
 
