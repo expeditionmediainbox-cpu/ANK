@@ -23,7 +23,7 @@ export default function AboutSection() {
             <span className="font-mono text-xs uppercase tracking-widest text-stone-500 block mb-2">
               ELEGANT & GRACEFUL
             </span>
-            <h2 className="font-serif text-4xl md:text-5xl text-stone-900 font-normal mb-8">
+            <h2 className="font-serif text-4xl md:text-5xl text-stone-900 font-bold mb-8">
               About Ankita Sharma
             </h2>
             <p className="font-serif text-lg text-stone-700 leading-relaxed font-light mb-6">

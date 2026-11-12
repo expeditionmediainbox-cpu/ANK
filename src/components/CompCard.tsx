@@ -76,7 +76,7 @@ export default function CompCard({ paymentUnlocked, onUnlockClick }: CompCardPro
           {/* Casting Branding Header */}
           <div className="flex justify-between items-center border-b border-stone-800 print:border-stone-200 pb-4 mb-6">
             <div>
-              <p className="font-serif text-2xl tracking-widest text-white print:text-black uppercase">
+              <p className="font-serif text-2xl font-bold tracking-widest text-white print:text-black uppercase">
                 {MODEL_NAME}
               </p>
               <p className="font-mono text-[9px] uppercase tracking-wider text-stone-400 print:text-stone-600 mt-1">

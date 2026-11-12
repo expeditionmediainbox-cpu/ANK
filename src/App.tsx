@@ -97,7 +97,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo / Name */}
           <a href="#" className="group flex flex-col">
-            <span className="font-serif text-lg md:text-xl font-normal tracking-widest uppercase text-stone-950 group-hover:opacity-80 transition-opacity">
+            <span className="font-serif text-lg md:text-xl font-bold tracking-widest uppercase text-stone-950 group-hover:opacity-80 transition-opacity">
               {MODEL_NAME}
             </span>
             <span className="font-mono text-[9px] text-stone-500 uppercase tracking-widest mt-0.5">
@@ -268,7 +268,7 @@ export default function App() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.7 }}
-              className="font-serif text-5xl md:text-7xl lg:text-8xl tracking-tight text-stone-950 leading-[0.9] font-normal"
+              className="font-serif text-5xl md:text-7xl lg:text-8xl tracking-tight text-stone-950 leading-[0.9] font-bold"
             >
               {MODEL_NAME}
               <span className="block font-mono text-xs md:text-sm uppercase tracking-[0.2em] font-medium text-stone-600 mt-4">
@@ -423,7 +423,7 @@ export default function App() {
             
             {/* Branding */}
             <div className="md:col-span-2">
-              <span className="font-serif text-2xl tracking-widest text-white uppercase block mb-3">
+              <span className="font-serif text-2xl font-bold tracking-widest text-white uppercase block mb-3">
                 {MODEL_NAME}
               </span>
               <p className="font-mono text-[10px] text-stone-500 uppercase tracking-widest mb-6">
